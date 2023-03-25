@@ -8,8 +8,8 @@ def home():
 
 @app.route('/about')
 def about():
-    return'About page'
+    return render_template('about.html') #render_template se usa para "enlazar" con una vista, en este caso al ir a /about
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)#podemos poner debug=True debido que al estar en un entorno de pruebas queremos que se actualice constantemente
