@@ -4,11 +4,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    title = "Mascotas Loli"
+    return render_template('index.html', title=title)
 
 @app.route('/about')
 def about():
-    return render_template('about.html') #render_template se usa para "enlazar" con una vista, en este caso al ir a /about
+    title = "Sobre Nosotros"
+    return render_template('about.html', title=title) #render_template se usa para "enlazar" con una vista, en este caso al ir a /about
 
 
 if __name__ == '__main__':
